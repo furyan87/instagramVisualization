@@ -1,0 +1,40 @@
+2014-05-19 18:47:37,505 INFO  [InstaScraper] - Starting to get media feed from user 1326856884
+2014-05-19 18:47:38,445 INFO  [InstaScraper] - Successfully loaded recent media feed
+2014-05-19 18:47:38,445 DEBUG [Media] - URL of picture is http://origincache-ash.fbcdn.net/10358352_679975375403274_873468798_n.jpg
+2014-05-19 18:47:38,446 DEBUG [Media] - TAGS for picture are [new, bbq, summer]
+2014-05-19 18:47:38,446 DEBUG [Media] - Created MEDIA-TAG new
+2014-05-19 18:47:38,446 DEBUG [Media] - Added newTag to list of MEDIA-TAGS: true
+2014-05-19 18:47:38,446 DEBUG [Media] - Created MEDIA-TAG bbq
+2014-05-19 18:47:38,446 DEBUG [Media] - Added newTag to list of MEDIA-TAGS: true
+2014-05-19 18:47:38,446 DEBUG [Media] - Created MEDIA-TAG summer
+2014-05-19 18:47:38,447 DEBUG [Media] - Added newTag to list of MEDIA-TAGS: true
+2014-05-19 18:47:38,447 INFO  [Media] - Final MEDIA-TAG list is: [bbq, new, summer]
+2014-05-19 18:47:38,447 DEBUG [Media] - Filename is 1326856884_bbq_new_summer.jpg
+2014-05-19 18:47:38,447 DEBUG [Media] - Image path is: pictures/1326856884_bbq_new_summer.jpg
+2014-05-19 18:47:38,447 DEBUG [Media] - Created file successfully or already existed
+2014-05-19 18:47:38,447 DEBUG [Media] - Loading image from http://origincache-ash.fbcdn.net/10358352_679975375403274_873468798_n.jpg
+2014-05-19 18:47:38,960 INFO  [Media] - Image pictures/1326856884_bbq_new_summer.jpg created from http://origincache-ash.fbcdn.net/10358352_679975375403274_873468798_n.jpg
+2014-05-19 18:47:38,960 DEBUG [Media] - URL of picture is http://origincache-ash.fbcdn.net/926463_1448109488761825_1437932935_n.jpg
+2014-05-19 18:47:38,960 DEBUG [Media] - TAGS for picture are [couchpotato, smile, dog]
+2014-05-19 18:47:38,960 DEBUG [Media] - Created MEDIA-TAG couchpotato
+2014-05-19 18:47:38,960 DEBUG [Media] - Added newTag to list of MEDIA-TAGS: true
+2014-05-19 18:47:38,960 DEBUG [Media] - Created MEDIA-TAG smile
+2014-05-19 18:47:38,960 DEBUG [Media] - Added newTag to list of MEDIA-TAGS: true
+2014-05-19 18:47:38,960 DEBUG [Media] - Created MEDIA-TAG dog
+2014-05-19 18:47:38,960 DEBUG [Media] - Added newTag to list of MEDIA-TAGS: true
+2014-05-19 18:47:38,960 INFO  [Media] - Final MEDIA-TAG list is: [couchpotato, dog, smile]
+2014-05-19 18:47:38,960 DEBUG [Media] - Filename is 1326856884_couchpotato_dog_smile.jpg
+2014-05-19 18:47:38,960 DEBUG [Media] - Image path is: pictures/1326856884_couchpotato_dog_smile.jpg
+2014-05-19 18:47:38,961 DEBUG [Media] - Created file successfully or already existed
+2014-05-19 18:47:38,961 DEBUG [Media] - Loading image from http://origincache-ash.fbcdn.net/926463_1448109488761825_1437932935_n.jpg
+2014-05-19 18:47:39,467 INFO  [Media] - Image pictures/1326856884_couchpotato_dog_smile.jpg created from http://origincache-ash.fbcdn.net/926463_1448109488761825_1437932935_n.jpg
+2014-05-19 18:47:39,467 DEBUG [Media] - URL of picture is http://origincache-frc.fbcdn.net/10268874_294020027441593_1116670919_n.jpg
+2014-05-19 18:47:39,467 DEBUG [Media] - TAGS for picture are [dog]
+2014-05-19 18:47:39,467 DEBUG [Media] - Created MEDIA-TAG dog
+2014-05-19 18:47:39,467 DEBUG [Media] - Added newTag to list of MEDIA-TAGS: true
+2014-05-19 18:47:39,467 INFO  [Media] - Final MEDIA-TAG list is: [dog]
+2014-05-19 18:47:39,468 DEBUG [Media] - Filename is 1326856884_dog.jpg
+2014-05-19 18:47:39,468 DEBUG [Media] - Image path is: pictures/1326856884_dog.jpg
+2014-05-19 18:47:39,468 DEBUG [Media] - Created file successfully or already existed
+2014-05-19 18:47:39,468 DEBUG [Media] - Loading image from http://origincache-frc.fbcdn.net/10268874_294020027441593_1116670919_n.jpg
+2014-05-19 18:47:39,931 INFO  [Media] - Image pictures/1326856884_dog.jpg created from http://origincache-frc.fbcdn.net/10268874_294020027441593_1116670919_n.jpg
