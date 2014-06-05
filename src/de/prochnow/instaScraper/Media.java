@@ -1,5 +1,6 @@
 package de.prochnow.instaScraper;
 
+import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -9,6 +10,8 @@ import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.List;
 import java.util.TreeSet;
+
+import javax.imageio.ImageIO;
 
 import org.jinstagram.entity.users.feed.MediaFeedData;
 import org.slf4j.Logger;
@@ -20,13 +23,15 @@ public class Media {
 
     public static final String DEFAULT_FILE_EXT = ".jpg";
 
-    public static final String DEFAULT_PIC_LOCATION = "pictures";
+    public static final String DEFAULT_PIC_LOCATION = "src/data";
 
     public Picture picture;
 
     public long userID;
 
     public TreeSet<Tag> tags = new TreeSet<Tag>();
+    
+    public static int pictureIndex = 1;
 
     public Media(final long userID, final Picture pic, final TreeSet<Tag> tags) {
         this.userID = userID;
@@ -46,11 +51,12 @@ public class Media {
             // TODO Auto-generated catch block
             e.printStackTrace();
         }
-
-        String destinationPath = DEFAULT_PIC_LOCATION + File.separator + this.createFileNameFromTags();
+        String fileName = this.createFileNameFromTags();
+        String destinationPath = DEFAULT_PIC_LOCATION + File.separator + fileName;
         logger.debug("Image path is: {}", destinationPath);
 
         File pictureFile = new File(destinationPath);
+        this.picture.path = pictureFile.getAbsolutePath();
         if(!pictureFile.exists()) {
             try {
                 pictureFile.createNewFile();
@@ -63,14 +69,22 @@ public class Media {
         logger.debug("Loading image from {}", url);
         try (InputStream is = url.openStream();
                 OutputStream os = new FileOutputStream(destinationPath);) {
-            byte[] b = new byte[2048];
-            int length;
+//            byte[] b = new byte[2048];
+//            int length;
 
-            while((length = is.read(b)) != -1) {
-                os.write(b, 0, length);
-            }
+            BufferedImage img = ImageIO.read(is);
 
-            is.close();
+            this.picture.source = img;
+            
+            ImageIO.write(img, "jpg", os);
+            
+            
+//            while((length = is.read(b)) != -1) {
+//            	
+//                os.write(b, 0, length);
+//            }
+
+//            is.close();
             os.close();
         }
         catch(IOException e) {
@@ -78,14 +92,20 @@ public class Media {
         }
 
         logger.info("Image {} created from {}", destinationPath, url);
+        
     }
 
     private String createFileNameFromTags() {
         String filename = String.valueOf(this.userID);
 
-        for(Tag tag : this.tags) {
-            filename = filename + "_" + tag.name;
-        }
+//        for(Tag tag : this.tags) {
+//            filename = filename + "_" + tag.name;
+//        }
+        
+        filename = filename + "_" + System.currentTimeMillis();
+        
+        filename = filename + "_" + pictureIndex;
+        pictureIndex++;
 
         filename = filename + DEFAULT_FILE_EXT;
         logger.debug("Filename is {}", filename);

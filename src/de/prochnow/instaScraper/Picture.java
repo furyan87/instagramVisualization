@@ -1,5 +1,6 @@
 package de.prochnow.instaScraper;
 
+import java.awt.image.BufferedImage;
 import java.net.MalformedURLException;
 
 
@@ -14,6 +15,10 @@ public class Picture extends VisualObject {
     public int[] colors;
 
     public String path = "";
+
+	public BufferedImage source;
+    
+    
 
     public Picture(final String url) throws MalformedURLException {
         this(url, DEFAULT_COLOR_COUNT);
